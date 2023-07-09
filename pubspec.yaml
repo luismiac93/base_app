@@ -7,6 +7,7 @@ environment:
   sdk: '>=3.0.5 <4.0.0'
 
 dependencies:
+  auto_route: ^7.7.0
   flutter:
     sdk: flutter
 
@@ -14,6 +15,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  auto_route_generator: ^7.2.0
+  build_runner: ^2.4.6
 
 flutter:
   uses-material-design: true

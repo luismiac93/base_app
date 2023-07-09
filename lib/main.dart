@@ -1,23 +1,22 @@
 import 'package:base_app/config/theme/app_theme.dart';
-import 'package:flutter/material.dart';
+import 'package:base_app/core/presentation/routes/app_router.dart';
+import 'package:flutter/material.dart' hide Router;
 
 void main() {
-  runApp(const MainApp());
+  runApp(MainApp());
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  MainApp({super.key});
+
+  final _appRouter = AppRouter();
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: _appRouter.config(),
       debugShowCheckedModeBanner: false,
       theme: AppTheme().getTheme(),
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
     );
   }
 }
